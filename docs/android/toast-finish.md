@@ -85,7 +85,7 @@ public static Toast custom(@NonNull Context context, @NonNull CharSequence messa
 > Custom toast views are deprecated. Apps can create a standard text toast with the makeText(Context, CharSequence, int) method, or use a Snackbar when in the foreground. Starting from Android Build.VERSION_CODES.R, apps targeting API level Build.VERSION_CODES.R or higher that are in the background will not have custom toast views displayed.
 - 说自定义的Toast在安卓11+，targetAPI30+，且APP在background状态时，则不会显示。可是我的APP明明在前台啊，只不过正好在finish Activity；但和标准的Toast的主要区别也就这一处了。好吧，那就去看看谷歌是怎么改动这里的代码的吧。
 
-- 上[cs.android.com](cs.android.com)看看谷歌的实现。Toast类的show方法的代码是这样的：
+- 上[cs.android.com](https://cs.android.com)看看谷歌的实现。Toast类的show方法的代码是这样的：
 ```java
 public void show() {
     if (Compatibility.isChangeEnabled(CHANGE_TEXT_TOASTS_IN_THE_SYSTEM)) {
