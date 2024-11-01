@@ -1,3 +1,7 @@
+---
+tag: Xposed
+---
+
 # 志愿汇去广告 SimpleHook 配置
 
 ## SimpleHook
